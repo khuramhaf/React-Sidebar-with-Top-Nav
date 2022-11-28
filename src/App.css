@@ -77,3 +77,26 @@
 }
 
 
+.animation{
+  max-height: 70px;
+  overflow-y: hidden;
+	transition-duration: .5s;
+ 
+ 
+ 
+}
+
+
+.animation1{
+  
+max-height: 0px; /* approximate max height */
+  overflow-y: hidden;
+	transition-duration: .5s;
+  
+ 
+	
+ 
+  
+}
+
+

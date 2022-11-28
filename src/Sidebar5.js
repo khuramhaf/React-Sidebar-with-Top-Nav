@@ -3,45 +3,34 @@ import {useState, useEffect} from 'react'
 
 
 
-function Sidebar1(props) {
+function Sidebar5(props) {
 
     const [state, setstate] = useState(false)
 
     function myfun(e){
+e.preventDefault();
 
-        e.preventDefault();
+if (state===false){
 
+    setstate(true)
+}
+
+else{
+
+    setstate(false)
+}
        
-        if(props.state[0]===false){
-setstate(true)
-            var array1 = [true, false]
-            props.setstate(array1)
-        }
-
-        else{
-            var array1 = [false, false]
-            props.setstate(array1)
-            setstate(false)
-        }
     }
 
 
     useEffect(()=>{
 
-        if(props.state[0]===false){
-            setstate(false)
-            
-        }
-
-        else{
-            setstate(true)
-        }
 
     })
     return ( 
 
 <div>
-<a className="anchor" href="" onClick={myfun}>Anchor1 <i className={state? "arrow1": 'arrow'}></i></a>
+<a className="anchor" href="" onClick={myfun}>Anchor1 </a>
 <div className={"hello " + (state? "animation":"animation1") }>
 <li><NavLink style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'blue' })} to="comp1">Comp1</NavLink></li>
@@ -56,4 +45,4 @@ setstate(true)
      );
 }
 
-export default Sidebar1;
+export default Sidebar5;
