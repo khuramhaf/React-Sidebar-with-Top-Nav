@@ -37,12 +37,14 @@ setstate(true)
             setstate(true)
         }
 
+        console.log(document.getElementById("hello").offsetHeight);
+
     })
     return ( 
 
 <div>
 <a className="anchor" href="" onClick={myfun}>Anchor1 <i className={state? "arrow1": 'arrow'}></i></a>
-<div className={"hello " + (state? "animation":"animation1") }>
+<div id="hello" className={"hello " + (state? "animation":"animation1") }>
 <li><NavLink style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'blue' })} to="comp1">Comp1</NavLink></li>
 <li><NavLink style={({ isActive }) => ({ 
