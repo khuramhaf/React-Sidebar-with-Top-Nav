@@ -12,14 +12,14 @@ function Sidebar3(props) {
         e.preventDefault()
 
         
-        if(props.state[0]==="none"){
+        if(props.state[0]===false){
             setstate(true)
-            var array1 = ["block", "none"]
+            var array1 = [true, false]
             props.setstate(array1)
         }
 
         else{
-            var array1 = ["none", "none"]
+            var array1 = [false, false]
             props.setstate(array1)
             setstate(false)
         }
@@ -28,7 +28,7 @@ function Sidebar3(props) {
 
     useEffect(()=>{
 
-        if(props.state[0]==="none"){
+        if(props.state[0]===false){
             setstate(false)
             
         }
@@ -42,14 +42,14 @@ function Sidebar3(props) {
 
 <div>
 <a href="" className="anchor" onClick={myfun}>Anchor3 <i className={state? "arrow1": 'arrow'}></i></a>
-<ul style={{display: props.state[0]}}>
+<div className={"hello " + (state? "animation":"animation1") }>
 <li><NavLink style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'blue' })} to="comp7">Comp7</NavLink></li>
 <li><NavLink style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'blue' })} to="comp8">Comp8</NavLink></li>
 <li><NavLink style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'blue' })} to="comp9">Comp9</NavLink></li>
-</ul>
+</div>
 
 
 </div>
