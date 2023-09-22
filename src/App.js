@@ -20,47 +20,47 @@ import Comp9 from './Comp9';
 import Comp10 from './Comp10';
 import Comp11 from './Comp11';
 import Comp12 from './Comp12';
+import Sidebar5 from './Sidebar5';
 
 function App() {
 
-  var array = ["none", "none"]
+  var array = [false, false]
 
   const [state, setstate] = useState(array);
   const [state1, setstate1] = useState(array);
-  const [state2, setstate2]  = useState(true);
 
   useEffect(()=>{
     window.addEventListener('popstate', ()=>{
 
       if (window.location.pathname==="/accounts"){
-        var array1 = ["none", "none"]
+        var array1 = [false, false]
         setstate(array1);
       }
 
       else if (window.location.pathname==="/accounts/comp1" || window.location.pathname==="/accounts/comp2" || window.location.pathname==="/accounts/comp3"){
-        var array1 = ["block", "none"]
+        var array1 = [true, false]
         setstate(array1);
       }
 
       else if (window.location.pathname==="/accounts/comp4" || window.location.pathname==="/accounts/comp5" || window.location.pathname==="/accounts/comp6"){
-        var array1 = ["none", "block"]
+        var array1 = [false, true]
         setstate(array1);
       }
 
 
 
       else if (window.location.pathname==="/cards"){
-        var array1 = ["none", "none"]
+        var array1 = [false, false]
         setstate1(array1);
       }
 
       else if (window.location.pathname==="/cards/comp7" || window.location.pathname==="/cards/comp8"  || window.location.pathname==="/cards/comp9" ){
-        var array1 = ["block", "none"]
+        var array1 = [true, false]
         setstate1(array1);
       }
 
       else if (window.location.pathname==="/cards/comp10"  || window.location.pathname==="/cards/comp11"  || window.location.pathname==="/cards/comp12" ){
-        var array1 = ["none", "block"]
+        var array1 = [false, true]
         setstate1(array1);
       }
 
@@ -75,33 +75,33 @@ function App() {
    
 
       if (window.location.pathname==="/accounts"){
-        let array1 = ["none", "none"]
+        let array1 = [false, false]
         setstate(array1);
       }
 
       else if (window.location.pathname==="/accounts/comp1" || window.location.pathname==="/accounts/comp2" || window.location.pathname==="/accounts/comp3"){
-        let array1 = ["block", "none"]
+        let array1 = [true, false]
         setstate(array1);
       }
 
       else if (window.location.pathname==="/accounts/comp4" || window.location.pathname==="/accounts/comp5" || window.location.pathname==="/accounts/comp6"){
-        let array1 = ["none", "block"]
+        let array1 = [false, true]
         setstate(array1);
       }
 
 
       else if (window.location.pathname==="/cards"){
-        let array1 = ["none", "none"]
+        let array1 = [false, false]
         setstate1(array1);
       }
 
       else if (window.location.pathname==="/cards/comp7" || window.location.pathname==="/cards/comp8"  || window.location.pathname==="/cards/comp9" ){
-        let array1 = ["block", "none"]
+        let array1 = [true, false]
         setstate1(array1);
       }
 
       else if (window.location.pathname==="/cards/comp10"  || window.location.pathname==="/cards/comp11"  || window.location.pathname==="/cards/comp12" ){
-        let array1 = ["none", "block"]
+        let array1 = [false, true]
         setstate1(array1);
       }
 
@@ -115,14 +115,14 @@ function App() {
 
 function myfun(){
 
-  var array1 = ["none", "none"]
+  var array1 = [false, false]
   setstate(array1);
 }
 
 
 function myfun1(){
 
-  var array1 = ["none", "none"]
+  var array1 = [false, false]
   setstate1(array1);
 }
   return (

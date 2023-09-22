@@ -12,14 +12,14 @@ function Sidebar1(props) {
         e.preventDefault();
 
        
-        if(props.state[0]==="none"){
+        if(props.state[0]===false){
 setstate(true)
-            var array1 = ["block", "none"]
+            var array1 = [true, false]
             props.setstate(array1)
         }
 
         else{
-            var array1 = ["none", "none"]
+            var array1 = [false, false]
             props.setstate(array1)
             setstate(false)
         }
@@ -28,7 +28,7 @@ setstate(true)
 
     useEffect(()=>{
 
-        if(props.state[0]==="none"){
+        if(props.state[0]===false){
             setstate(false)
             
         }
@@ -37,19 +37,21 @@ setstate(true)
             setstate(true)
         }
 
+        console.log(document.getElementById("hello").offsetHeight);
+
     })
     return ( 
 
 <div>
 <a className="anchor" href="" onClick={myfun}>Anchor1 <i className={state? "arrow1": 'arrow'}></i></a>
-<ul style={{display: props.state[0]}}>
+<div id="hello" className={"hello " + (state? "animation":"animation1") }>
 <li><NavLink style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'blue' })} to="comp1">Comp1</NavLink></li>
 <li><NavLink style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'blue' })} to="comp2">Comp2</NavLink></li>
 <li><NavLink style={({ isActive }) => ({ 
                             color: isActive ? 'greenyellow' : 'blue' })} to="comp3">Comp3</NavLink></li>
-</ul>
+</div>
 
 
 </div>

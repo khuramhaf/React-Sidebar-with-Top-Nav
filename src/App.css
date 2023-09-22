@@ -58,8 +58,8 @@
 .sidebar{
   float:left;
   background: lightgray;
-  width: 20%;
-  padding: 2%;
+  width: 273px;
+  padding: 30px;
   height: calc(100vh - 0px);
   overflow:hidden;
   box-sizing: border-box;
@@ -69,11 +69,34 @@
 .comp{
   float:right;
   background: lightgreen;
-  width:80%;
-  padding: 2%;
+  width:calc(100% - 273px);
+ 
   height: calc(100vh - 0px);
   overflow:hidden;
   box-sizing: border-box;
+}
+
+
+.animation{
+  max-height: 65px;
+  overflow-y: hidden;
+	transition-duration: .5s;
+ 
+ 
+ 
+}
+
+
+.animation1{
+  
+max-height: 0px; /* approximate max height */
+  overflow-y: hidden;
+	transition-duration: .5s;
+  
+ 
+	
+ 
+  
 }
 
 
